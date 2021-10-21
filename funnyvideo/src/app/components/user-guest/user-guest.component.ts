@@ -10,7 +10,13 @@ export class UserGuestComponent implements OnInit {
 
   constructor() { }
 
+  user = {
+    username: '',
+    password: ''
+  }
+
   ngOnInit(): void {
   }
 
+  login() { }
 }

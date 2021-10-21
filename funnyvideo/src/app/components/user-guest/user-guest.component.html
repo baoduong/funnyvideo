@@ -1,1 +1,27 @@
-<p>user-guest works!</p>
+<form
+  class="row"
+  style="justify-content: flex-end"
+  (ngSubmit)="login()"
+  #form="ngForm"
+>
+  <div class="col-auto">
+    <input
+      type="text"
+      class="form-control"
+      id="inputUsername"
+      [(ngModel)]="user.username"
+    />
+  </div>
+  <div class="col-auto">
+    <input
+      type="password"
+      class="form-control"
+      id="inputPassword2"
+      placeholder="Password"
+      [(ngModel)]="user.password"
+    />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Login / Register</button>
+  </div>
+</form>

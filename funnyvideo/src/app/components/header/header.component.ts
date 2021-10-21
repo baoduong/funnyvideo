@@ -8,6 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isAuthenticatd = false;
   constructor() { }
 
   ngOnInit(): void {
