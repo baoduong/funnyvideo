@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "funny-video-578ac": {
+      "hosting": {
+        "funnyvideo": [
+          "funny-video-578ac"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "funny-video-578ac"
+  }
+}
