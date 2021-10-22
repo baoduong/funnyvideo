@@ -1,0 +1,11 @@
+<div class="row justify-content-end">
+  <label for="staticEmail" class="col-auto col-form-label"
+    >{{ (currentUser$ | async).email }}
+  </label>
+  <div class="col-auto">
+    <button (click)="share()" class="btn btn-primary">Share video</button>
+  </div>
+  <div class="col-auto">
+    <button (click)="logout()" class="btn btn-secondary">Logout</button>
+  </div>
+</div>

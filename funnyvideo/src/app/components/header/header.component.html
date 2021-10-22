@@ -2,10 +2,10 @@
   <div class="col-12 header-layout">
     <div class="row align-items-center">
       <div class="col-md-4 col-xs-12">
-        <h1>Funny Movies</h1>
+        <a class="btn-home" [routerLink]="['/']"> <h1>Funny Movies</h1></a>
       </div>
       <div class="col-xs-12 col-md-8">
-        <ng-container *ngIf="isAuthenticatd; else userGuest">
+        <ng-container *ngIf="isAuthenticated$ | async; else userGuest">
           <app-user-sign-in></app-user-sign-in>
         </ng-container>
       </div>

@@ -1,15 +1,16 @@
 <form
   class="row"
   style="justify-content: flex-end"
-  (ngSubmit)="login()"
+  (ngSubmit)="auth()"
   #form="ngForm"
 >
   <div class="col-auto">
     <input
-      type="text"
+      type="email"
       class="form-control"
       id="inputUsername"
-      [(ngModel)]="user.username"
+      [(ngModel)]="user.email"
+      name="email"
     />
   </div>
   <div class="col-auto">
@@ -19,6 +20,7 @@
       id="inputPassword2"
       placeholder="Password"
       [(ngModel)]="user.password"
+      name="password"
     />
   </div>
   <div class="col-auto">

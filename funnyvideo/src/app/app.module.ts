@@ -14,6 +14,9 @@ import { UserSignInComponent } from './components/user-sign-in/user-sign-in.comp
 import { HomeComponent } from './@pages/home/home.component';
 import { ShareLinkComponent } from './@pages/share-link/share-link.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserManagementService } from './@services/user-management.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,12 +32,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    BrowserAnimationsModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    UserManagementService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,5 +8,6 @@ export const environment = {
     messagingSenderId: '999545879604',
     measurementId: 'G-Y86JQ3E90P',
   },
-  production: true
+  production: true,
+  api: 'https://backendfunnyvideos.herokuapp.com/api'
 };

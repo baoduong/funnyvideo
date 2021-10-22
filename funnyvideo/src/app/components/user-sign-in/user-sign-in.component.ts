@@ -1,4 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
+import { UserManagementService } from 'src/app/@services/user-management.service';
 
 @Component({
   selector: 'app-user-sign-in',
@@ -8,10 +11,22 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class UserSignInComponent implements OnInit {
 
-  constructor() { }
+  currentUser$ = new BehaviorSubject<any>(undefined);
+
+  constructor(private userService: UserManagementService, private router: Router) {
+    this.userService.currentUser.subscribe(data => {
+      this.currentUser$.next(data)
+    })
+  }
 
   ngOnInit(): void {
   }
-  
-  login() { }
+
+  logout() {
+    this.userService.logout()
+  }
+
+  share() {
+    this.router.navigate(['share-link'])
+  }
 }
